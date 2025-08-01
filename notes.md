@@ -13,5 +13,8 @@
   - Dist folder la irunthu Build panna file ah preview panni pakka ithu use agum
 - Dependencies Graf
 - eslint.config.js --> AirBnB
+
   - it desiding style of coding.Team code style enforce panna use agum.
   - ex: unused codes
+
+- github --> Netlify --> npm run build --> dist folder --> creates .com
