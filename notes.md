@@ -18,3 +18,22 @@
   - ex: unused codes
 
 - github --> Netlify --> npm run build --> dist folder --> creates .com
+
+### Two types of imports and exports
+
+1. Named Imports --> use Curly brackets {}
+2. Default Imports --> cannot use curly Brackets {}. Because it is imports only one component.
+3. Named Export --> Multiple exports (recommend)
+4. Default Export --> One per file
+
+- JSX rule - only one parent element
+- React fragments <>... </>
+
+#### Terminal command
+
+- hmr ---> Hot Module Reload
+
+- CI/ CD ==> Contineous Integration / Contineous Deployment
+- Parent to child data transform panna Props use pannanum
+- onClick --> setState --> State Update aguthu --> Component Rerender agum
+- Component => F(S) --> Function of State
