@@ -47,3 +47,12 @@
   like > 10 ? <h1>Awesome</h1> : <h1>Cool</h1>;
 }
 ```
+
+### useParams
+
+- it is used to get id from url.
+- must full colan use pannanum in url. (contanct/:id)
+
+- Page not found path="\*" itha use pannanum
+- \*--> any path (else)
+-
