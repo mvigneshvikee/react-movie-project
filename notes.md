@@ -37,3 +37,13 @@
 - Parent to child data transform panna Props use pannanum
 - onClick --> setState --> State Update aguthu --> Component Rerender agum
 - Component => F(S) --> Function of State
+
+# Day 3
+
+### Condition Rendering
+
+```jsx
+{
+  like > 10 ? <h1>Awesome</h1> : <h1>Cool</h1>;
+}
+```

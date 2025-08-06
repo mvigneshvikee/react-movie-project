@@ -1,8 +1,9 @@
+import { User } from "./User";
 // JSX rule - only one parent element
 // React fragments <>... </>
 // Smart Component (data)
 // Task - UserList (DRY)
-function UserList() {
+export function UserList() {
   return (
     <section className="user-list-container">
       <User

@@ -32,6 +32,55 @@
   display: grid;
   grid-template-columns: 1fr;
   } */
+
+/* users style */
+
+.user-container {
+  img {
+    height: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  span {
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.user-list-container {
+  display: grid;
+  gap: 42px;
+}
+
+.counter-container{
+  .buttons{
+display: flex;
+gap: 18px;
+justify-content: center;
+  }
+}
+.movieCounter-container{
+  .buttons{
+display: flex;
+justify-content: start;
+gap: 18px;
+button{
+  padding: 10px;
+  width: 100px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+/* justify-content: center; */
+  }
+}
+
+/* ===================== */
   .movie-title{
     h1{
       font-size: 25px;
