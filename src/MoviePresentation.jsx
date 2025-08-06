@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { MovieCounter } from "./MovieCounter";
 
 function MoviePresentation({ name, poster, rating, summary }) {
-  const [clicked, setClicked] = useState(false);
-
-  useEffect(() => {
-    // setToggle(!toggle);
-  }, [clicked]);
+  const [show, setShow] = useState(false);
+  // Component is a function of State. If State is changed Re-rendering the Component.
+  const summaryStyle = {
+    display: show ? "block" : "none",
+  };
   return (
     <div className="movie">
       <img src={poster} alt={name} />
@@ -22,21 +22,15 @@ function MoviePresentation({ name, poster, rating, summary }) {
           ⭐{rating}{" "}
         </h2>
       </div>
-      <button className="show-summary" onClick={() => setClicked(!clicked)}>
+      <button className="show-summary" onClick={() => setShow(!show)}>
         Toggle
       </button>
       <br />
       {/* Conditional Styling  */}
-      {/* <p
-        style={{
-          display: clicked ? "block" : "none",
-        }}
-      >
-        {summary}
-      </p> */}
+      <p style={summaryStyle}>{summary}</p>
 
       {/* Conditional Rendering  */}
-      <p>{clicked && summary}</p>
+      {/* <p>{show && summary}</p> */}
       <MovieCounter />
     </div>
   );
