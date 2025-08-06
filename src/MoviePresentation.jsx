@@ -26,7 +26,7 @@ function MoviePresentation({ name, poster, rating, summary }) {
         Toggle
       </button>
       <br />
-
+      {/* Conditional Styling  */}
       {/* <p
         style={{
           display: clicked ? "block" : "none",
@@ -34,6 +34,8 @@ function MoviePresentation({ name, poster, rating, summary }) {
       >
         {summary}
       </p> */}
+
+      {/* Conditional Rendering  */}
       <p>{clicked && summary}</p>
       <MovieCounter />
     </div>
