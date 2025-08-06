@@ -115,6 +115,7 @@ button{
       padding: 8px;
       border-radius: 5px;
       align-items: start;
+      margin-bottom: 5px;
     }
     p{
        color: rgba(83, 81, 77, 0.916);
