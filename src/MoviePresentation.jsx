@@ -3,7 +3,7 @@ import { MovieCounter } from "./MovieCounter";
 
 function MoviePresentation({ name, poster, rating, summary }) {
   const [show, setShow] = useState(false);
-  // Component is a function of State. If State is changed Re-rendering the Component.
+  // Component is a function of State. If State is changed Re-rendering the Component. C =F(S)
   const summaryStyle = {
     display: show ? "block" : "none",
   };
