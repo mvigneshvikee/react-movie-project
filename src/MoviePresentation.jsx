@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MovieCounter } from "./MovieCounter";
+import { Link, useNavigate } from "react-router";
 
-function MoviePresentation({ name, poster, rating, summary }) {
+function MoviePresentation({ movie: { name, poster, rating, summary }, id }) {
   const [show, setShow] = useState(false);
   // Component is a function of State. If State is changed Re-rendering the Component. C =F(S)
   const summaryStyle = {
     display: show ? "block" : "none",
   };
+  const navigate = useNavigate();
   return (
     <div className="movie">
       <img src={poster} alt={name} />
@@ -19,12 +21,14 @@ function MoviePresentation({ name, poster, rating, summary }) {
             fontSize: rating > 8.5 ? "25px" : "20px",
           }}
         >
-          ⭐{rating}{" "}
+          ⭐{rating}
         </h2>
       </div>
       <button className="show-summary" onClick={() => setShow(!show)}>
         Toggle
       </button>
+      {/* <Link to={"/movies/" + id}>View Details</Link> */}
+      <button onClick={() => navigate("/movies/" + id)}>View Details</button>
       <br />
       {/* Conditional Styling  */}
       <p style={summaryStyle}>{summary}</p>
