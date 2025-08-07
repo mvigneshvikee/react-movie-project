@@ -55,4 +55,50 @@
 
 - Page not found path="\*" itha use pannanum
 - \*--> any path (else)
--
+- route match agalana _ ithu url value eduthukum. ex: incase user type wrong url _ get la url value and redirect (404-Page not found) developer set this.
+
+- wcag certificate
+- AA and AAA certificate
+- git lence is used to check commits and their changes.
+
+# Day4
+
+### Git (2007)
+
+- Git is a distributed system
+- Git --> Source Control Management / Version Control System.
+- Git Developed By Linus Torvalds. He also developed Linux.
+- git log --oneline
+- git log --all
+- git log -1 ==> last commit only it will show.
+- git checkout (commit id)
+- git checkout - ==> It is used to back to leatest master branch. Normally Head and Master both are in same place.
+- git status
+- git diff ==> enna change agi irukunu pakkum
+- git commit -m "all good"
+- git reset --soft HEAD~1 ==> delete leatest one commit. It means head la irunthu keela one commit target panni delete pannum. but it shows what will change.
+- git reset --hard HEAD~1 ==> Hard --> delete without backup.
+- git push -f ==> delete online master also. Dont use unwantedly.
+- git rebesh
+- git add file path --> files move to stage area
+- git add -p ==> one file ah single single line ah stage pannalam
+
+- git have 3 areas ==> working area, staging area, commit
+
+#### Anthony fuu slidev, vite, vitepress creator. also vue contributor.
+
+## Redirection
+
+- **event Bubbling** Interview question
+
+- sibling to sibling data share pannanum na data va common parent ku lift pannanum.
+- intha technic name lifiting the state up.
+
+### useNavigate()
+
+- +1 --> one step Forward
+- -1 --> one step Backward
+- It is also used navigate to page
+
+- Re-concilation is the Data updated to Virtural-Dom to Real-Dom process name
+- react-chartjs-2.js.org
