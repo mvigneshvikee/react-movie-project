@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MoviePresentation } from "./MoviePresentation";
 // import { Movie } from "./Movie";
 // import { INITIAL_MOVIES } from "./INITIAL_MOVIES";
 
-export function MovieList({ movies, setMovies }) {
-  // const [movies, setMovies] = useState(INITIAL_MOVIES);
-  console.log(movies);
-
+export function MovieList() {
+  const [movies, setMovies] = useState([]);
+  // console.log(movies);
+  async function getMovies() {
+    const response = await fetch(
+      "https://68959014039a1a2b288f7c3b.mockapi.io/movies"
+    );
+    const data = await response.json();
+    setMovies(data);
+  }
+  useEffect(() => {
+    getMovies();
+  }, []);
   const [name, setName] = useState("");
   const [poster, setPoster] = useState("");
   const [rating, setRating] = useState("");
@@ -74,8 +83,8 @@ export function MovieList({ movies, setMovies }) {
       </form>
 
       <section className="movie-list-container">
-        {movies.map((movie, index) => (
-          <MoviePresentation key={index} movie={movie} id={index} />
+        {movies.map((movie) => (
+          <MoviePresentation key={movie.id} movie={movie} />
         ))}
       </section>
     </div>

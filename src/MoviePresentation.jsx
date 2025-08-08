@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MovieCounter } from "./MovieCounter";
 import { Link, useNavigate } from "react-router";
 
-function MoviePresentation({ movie: { name, poster, rating, summary }, id }) {
+function MoviePresentation({ movie: { id, name, poster, rating, summary } }) {
   const [show, setShow] = useState(false);
   // Component is a function of State. If State is changed Re-rendering the Component. C =F(S)
   const summaryStyle = {

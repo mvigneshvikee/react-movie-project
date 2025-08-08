@@ -2,16 +2,14 @@ import { MovieList } from "./MovieList";
 import { UserList } from "./UserList";
 import "./styles.css";
 import { ColorGame } from "./ColorGame";
-import { Route, Routes, Link, useParams } from "react-router";
-import { useState } from "react";
+import { Route, Routes, Link, useParams, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
 import { Navigate } from "react-router";
-import { INITIAL_MOVIES } from "./INITIAL_MOVIES";
 import { MoviePresentation } from "./MoviePresentation";
 
 // Component = Logic + UI
 export default function App() {
   // Logic Starts
-  const [movies, setMovies] = useState(INITIAL_MOVIES);
   // Logic End
   return (
     <div className="App">
@@ -23,14 +21,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="films" element={<Navigate to="/movieList" replace />} />
-        <Route
-          path="movieList"
-          element={<MovieList movies={movies} setMovies={setMovies} />}
-        />
+        <Route path="movieList" element={<MovieList />} />
         <Route path="colorgame" element={<ColorGame />} />
         <Route path="userlist" element={<UserList />} />
         {/* <Route path="addmovie" element={<AddMovies />} /> */}
-        <Route path="movies/:id" element={<MovieDetails movies={movies} />} />
+        <Route path="movies/:id" element={<MovieDetails />} />
       </Routes>
       {/* <MsgList /> */}
       {/* <UserList /> */}
@@ -42,11 +37,23 @@ export default function App() {
   );
 }
 
-function MovieDetails({ movies }) {
+function MovieDetails() {
   const { id } = useParams();
-  console.log(movies);
-  const movie = movies[id];
 
+  const [movie, setMovie] = useState([]);
+  // console.log(movies);
+  async function getMovies() {
+    const response = await fetch(
+      // `https://68959014039a1a2b288f7c3b.mockapi.io/movies/${id}`
+      "https://68959014039a1a2b288f7c3b.mockapi.io/movies/" + id
+    );
+    const data = await response.json();
+    setMovie(data);
+  }
+  useEffect(() => {
+    getMovies();
+  }, []);
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -72,6 +79,7 @@ function MovieDetails({ movies }) {
         </div>
 
         <p className="movie-summary">{movie.summary}</p>
+        <button onClick={() => navigate("/movieList")}>Back</button>
       </div>
     </div>
   );
