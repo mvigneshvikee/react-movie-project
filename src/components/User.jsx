@@ -1,15 +1,14 @@
 // Task - User (Component)
 // Presentation Component - Reusablity ⬆️
-import { Counter } from "./Counter";
+import { Counter } from "./components/Counter";
 export function User({ name, pic }) {
-  
   return (
     <div className="user-container">
       <img src={pic} alt={`${name}'s profile pic`} />
       <p>
         Hello, <span>{name} </span>🎉🎉
       </p>
-       <Counter/>
+      <Counter />
     </div>
   );
 }
