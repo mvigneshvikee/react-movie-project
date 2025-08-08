@@ -111,3 +111,22 @@
 ### useEffect
 
 - useEffect component's life cycle ah manage pannum.
+- component mount --> conditional rendring agum pothu component mount agum.
+- when will useEffect run. Interview question.
+- All useEffects - rus on mount - only once
+- Mounted & props & state (update) - without dependencies array is not recommended.
+- use Explicit useEffect --> always maintain dependencies arrays with values.
+
+- RenderProps --> they have complete control of jsx element. parents methods la access pannalam.
+- parent developer how to view desides jsx element. (ex: delete button send as a props)
+
+### Post Methods
+
+- method -POST
+- Data - Body & JSON
+- Headers - JSON
+- rest api endpoit ==> it is mean by url
+- MCP AI new tech
+
+- Material Design --> Developed by Google
+- React Material --> MUI
