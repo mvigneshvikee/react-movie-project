@@ -102,3 +102,12 @@
 
 - Re-concilation is the Data updated to Virtural-Dom to Real-Dom process name
 - react-chartjs-2.js.org
+
+# Day- 5
+
+- R & D --> Research and Development
+- Webpack Bundle Analyzer ==> It works packages's weight.
+
+### useEffect
+
+- useEffect component's life cycle ah manage pannum.
