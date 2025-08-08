@@ -1,4 +1,4 @@
-import { User } from "../User";
+import { User } from "../components/User.jsx";
 // JSX rule - only one parent element
 // React fragments <>... </>
 // Smart Component (data)
