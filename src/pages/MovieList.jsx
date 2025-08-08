@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { MoviePresentation } from "./MoviePresentation";
+import { MoviePresentation } from "../components/MoviePresentation";
 // import { Movie } from "./Movie";
-// import { INITIAL_MOVIES } from "./INITIAL_MOVIES";
 
 export function MovieList() {
   const [movies, setMovies] = useState([]);
@@ -23,8 +22,6 @@ export function MovieList() {
   // const styles = {
   //   background: color,
   // };
-
-  // const [colors, setColors] = useState(INITIAL_COLORS);
 
   const resetMovieForm = () => {
     setName("");
