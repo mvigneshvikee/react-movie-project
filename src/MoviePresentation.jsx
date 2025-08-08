@@ -28,7 +28,12 @@ function MoviePresentation({ movie: { id, name, poster, rating, summary } }) {
         Toggle
       </button>
       {/* <Link to={"/movies/" + id}>View Details</Link> */}
-      <button onClick={() => navigate("/movies/" + id)}>View Details</button>
+      <button
+        className="view-details"
+        onClick={() => navigate("/movies/" + id)}
+      >
+        View Details
+      </button>
       <br />
       {/* Conditional Styling  */}
       <p style={summaryStyle}>{summary}</p>
