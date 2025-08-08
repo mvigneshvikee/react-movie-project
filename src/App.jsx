@@ -5,7 +5,7 @@ import { ColorGame } from "./ColorGame";
 import { Route, Routes, Link, useParams, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router";
-import { MoviePresentation } from "./MoviePresentation";
+import { Home } from "./Home";
 
 // Component = Logic + UI
 export default function App() {
@@ -27,12 +27,6 @@ export default function App() {
         {/* <Route path="addmovie" element={<AddMovies />} /> */}
         <Route path="movies/:id" element={<MovieDetails />} />
       </Routes>
-      {/* <MsgList /> */}
-      {/* <UserList /> */}
-      {/* <MovieList /> */}
-      {/* <Counter /> */}
-      {/* <ColorGame /> */}
-      {/* <ColorGame /> */}
     </div>
   );
 }
@@ -81,14 +75,6 @@ function MovieDetails() {
         <p className="movie-summary">{movie.summary}</p>
         <button onClick={() => navigate("/movieList")}>Back</button>
       </div>
-    </div>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <h1>Welcome to Movie App</h1>
     </div>
   );
 }
