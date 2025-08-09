@@ -147,3 +147,25 @@ margin: 0 10px;
 .movie-detail-content-container {
   max-width: 60rem;
 }
+
+.add-movie-form{
+  margin: 0 auto;
+  margin-top: 40px;
+  display: grid;
+  gap: 20px;
+  max-width: 1000px;
+  justify-content: center;
+  
+  /* align-items: center; */
+ > input{
+  width: 500px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  > button{
+    width:530px ;
+    padding: 10px;
+    font-size: 20px;
+
+  }
+}
