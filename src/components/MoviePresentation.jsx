@@ -44,6 +44,9 @@ function MoviePresentation({
       {/* Conditional Rendering  */}
       {/* <p>{show && summary}</p> */}
       <MovieCounter />
+      <button onClick={() => navigate("/movie-update/" + id)}>
+        Update Movie
+      </button>
       {deleteBtn}
     </div>
   );
