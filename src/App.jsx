@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { MovieDetails } from "./pages/MovieDetails";
 import { MovieList } from "./pages/MovieList";
 import { AddMovie } from "./pages/AddMovie";
+import { MovieUpdate } from "./pages/MovieUpdate";
 import "./styles.css";
 
 // Component = Logic + UI
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="userlist" element={<UserList />} />
         {/* <Route path="addmovie" element={<AddMovies />} /> */}
         <Route path="movies/:id" element={<MovieDetails />} />
+        <Route path="/movie-update/:id" element={<MovieUpdate />} />
       </Routes>
     </div>
   );
