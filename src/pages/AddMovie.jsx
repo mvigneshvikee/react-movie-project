@@ -31,7 +31,7 @@ export function AddMovie() {
 
     // Existing movies + new Movie
     const response = await fetch(
-      "https://6402db84f61d96ac487212a6.mockapi.io/movies",
+      "https://68959014039a1a2b288f7c3b.mockapi.io/movies",
       {
         method: "POST",
         body: JSON.stringify(newMovie),
@@ -43,7 +43,7 @@ export function AddMovie() {
 
     const data = await response.json();
     console.log(data);
-    navigate("/movies");
+    navigate("/movieList");
     resetMovieForm();
   };
 
@@ -64,7 +64,7 @@ export function AddMovie() {
       <input
         value={rating}
         onChange={(event) => setRating(event.target.value)}
-        type="text"
+        type="number"
         placeholder="Rating"
       />
       <input
@@ -75,7 +75,7 @@ export function AddMovie() {
       />
       <input
         value={trailer}
-        onChange={(event) => setSummary(event.target.value)}
+        onChange={(event) => setTrailer(event.target.value)}
         type="text"
         placeholder="Trailer"
       />
