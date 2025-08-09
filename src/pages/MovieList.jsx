@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MoviePresentation } from "../components/MoviePresentation";
+// import { AddMovie } from "./AddMovie";
 // import { Movie } from "./Movie";
 
 export function MovieList() {
@@ -7,81 +8,46 @@ export function MovieList() {
   // console.log(movies);
   async function getMovies() {
     const response = await fetch(
-      "https://68959014039a1a2b288f7c3b.mockapi.io/movies"
+      "https://68959014039a1a2b288f7c3b.mockapi.io/movies",
+      { method: "GET" }
     );
     const data = await response.json();
     setMovies(data);
   }
+
+  // Component Mounted - once
   useEffect(() => {
     getMovies();
   }, []);
-  const [name, setName] = useState("");
-  const [poster, setPoster] = useState("");
-  const [rating, setRating] = useState("");
-  const [summary, setSummary] = useState("");
-  // const styles = {
-  //   background: color,
-  // };
 
-  const resetMovieForm = () => {
-    setName("");
-    setPoster("");
-    setRating("");
-    setSummary("");
+  // Delete -> Refresh
+  const deleteMovie = async (id) => {
+    console.log("Deleting...", id);
+    const response = await fetch(
+      `https://6402db84f61d96ac487212a6.mockapi.io/movies/${id}`,
+      { method: "DELETE" }
+    );
+
+    const data = await response.json();
+    console.log(data);
+    getMovies();
   };
 
-  const addMovie = (event) => {
-    event.preventDefault(); // no refresh
-
-    const newMovie = {
-      name: name,
-      poster: poster,
-      rating: rating,
-      summary: summary,
-    };
-
-    // Existing movies + new Movie
-    setMovies([...movies, newMovie]);
-    resetMovieForm();
-  };
+  // C=F(S)
 
   return (
     <div>
-      <form onSubmit={addMovie} className="add-movie-form">
-        <input
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          type="text"
-          placeholder="Name"
-        />
-        <input
-          value={poster}
-          onChange={(event) => setPoster(event.target.value)}
-          type="text"
-          placeholder="Poster"
-        />
-        <input
-          value={rating}
-          onChange={(event) => setRating(event.target.value)}
-          type="text"
-          placeholder="Rating"
-        />
-        <input
-          value={summary}
-          onChange={(event) => setSummary(event.target.value)}
-          type="text"
-          placeholder="Summary"
-        />
-
-        {/* Task 3.2 - Add the color to the list */}
-        {/* Existing Colors + New Color */}
-        {/* submit -> onSubmit event triggered */}
-        <button type="submit">➕ Add</button>
-      </form>
-
       <section className="movie-list-container">
         {movies.map((movie) => (
-          <MoviePresentation key={movie.id} movie={movie} />
+          <MoviePresentation
+            key={movie.id}
+            movie={movie}
+            deleteBtn={
+              <button onClick={() => deleteMovie(movie.id)}>
+                🗑️ Delete Me
+              </button>
+            }
+          />
         ))}
       </section>
     </div>

@@ -18,6 +18,8 @@ export function MovieDetails() {
     getMovies();
   }, []);
   const navigate = useNavigate();
+  console.log(movie.trailer);
+
   return (
     <div
       style={{
