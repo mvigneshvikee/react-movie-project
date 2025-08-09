@@ -20,6 +20,10 @@ export function MovieDetails() {
   const navigate = useNavigate();
   console.log(movie.trailer);
 
+  // const isValidYoutubeEmbed = (url) => {
+  //   return /^https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]{11}$/.test(url);
+  // };
+
   return (
     <div
       style={{
@@ -27,6 +31,20 @@ export function MovieDetails() {
       }}
       className="movie-detail-container"
     >
+      {/* {isValidYoutubeEmbed(movie.trailer) ? (
+        <iframe
+          width="100%"
+          height="650"
+          src={movie.trailer}
+          title="AVENGERS: DOOMSDAY (2026) – FIRST TRAILER | Robert Downey Jr as Doctor Doom | Marvel Comics"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      ) : (
+        <p>Trailer link is not found</p>
+      )} */}
       <iframe
         width="100%"
         height="650"
