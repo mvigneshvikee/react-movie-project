@@ -4,6 +4,7 @@ import { ColorGame } from "./pages/ColorGame";
 import { Home } from "./pages/Home";
 import { MovieDetails } from "./pages/MovieDetails";
 import { MovieList } from "./pages/MovieList";
+import { AddMovie } from "./pages/AddMovie";
 import "./styles.css";
 
 // Component = Logic + UI
@@ -14,6 +15,7 @@ export default function App() {
     <div className="App">
       <nav>
         <Link to="/"> Home </Link> |<Link to="/movieList">MovieList</Link> |
+        <Link to="/movies/new"> Add Movie </Link> |
         <Link to="/colorgame"> ColorGame </Link> |
         <Link to="/userlist"> UserList </Link> |
       </nav>
@@ -21,6 +23,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="films" element={<Navigate to="/movieList" replace />} />
         <Route path="movieList" element={<MovieList />} />
+        <Route path="movies/new" element={<AddMovie />} />
         <Route path="colorgame" element={<ColorGame />} />
         <Route path="userlist" element={<UserList />} />
         {/* <Route path="addmovie" element={<AddMovies />} /> */}
