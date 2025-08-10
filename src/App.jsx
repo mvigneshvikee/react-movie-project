@@ -7,6 +7,7 @@ import { MovieList } from "./pages/MovieList";
 import { AddMovie } from "./pages/AddMovie";
 import { MovieUpdate } from "./pages/MovieUpdate";
 import "./styles.css";
+import { Navbar } from "./Navbar";
 
 // Component = Logic + UI
 export default function App() {
@@ -14,12 +15,8 @@ export default function App() {
   // Logic End
   return (
     <div className="App">
-      <nav>
-        <Link to="/"> Home </Link> |<Link to="/movieList">MovieList</Link> |
-        <Link to="/movies/new"> Add Movie </Link> |
-        <Link to="/colorgame"> ColorGame </Link> |
-        <Link to="/userlist"> UserList </Link> |
-      </nav>
+      <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="films" element={<Navigate to="/movieList" replace />} />
