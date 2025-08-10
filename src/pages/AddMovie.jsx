@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
 export function AddMovie() {
   const [name, setName] = useState("");
@@ -83,7 +85,13 @@ export function AddMovie() {
       {/* Task 3.2 - Add the color to the list */}
       {/* Existing Colors + New Color */}
       {/* submit -> onSubmit event triggered */}
-      <button type="submit">➕ Add</button>
+      {/* <button type="submit">➕ Add</button> */}
+      <Button type="submit" variant="contained">
+        Add Movie
+      </Button>
+      {/* <Button color="error" type="submit" variant="contained">
+        ➕ Add
+      </Button> */}
     </form>
   );
 }
