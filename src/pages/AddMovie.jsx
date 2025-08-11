@@ -1,7 +1,8 @@
+import Button from "@mui/material/Button";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import AddIcon from "@mui/icons-material/Add";
 
 export function AddMovie() {
   const [name, setName] = useState("");
@@ -51,42 +52,45 @@ export function AddMovie() {
 
   return (
     <form onSubmit={addMovie} className="add-movie-form">
-      <input
-        value={name}
+      <TextField
+        variant="outlined"
+        label="Name"
         onChange={(event) => setName(event.target.value)}
-        type="text"
-        placeholder="Name"
+        value={name}
       />
-      <input
-        value={poster}
+      <TextField
+        variant="outlined"
+        label="Poster"
         onChange={(event) => setPoster(event.target.value)}
-        type="text"
-        placeholder="Poster"
+        value={poster}
       />
-      <input
-        value={rating}
+
+      <TextField
+        variant="outlined"
+        label="Rating"
         onChange={(event) => setRating(event.target.value)}
-        type="number"
-        placeholder="Rating"
+        value={rating}
       />
-      <input
-        value={summary}
+
+      <TextField
+        variant="outlined"
+        label="Summary"
         onChange={(event) => setSummary(event.target.value)}
-        type="text"
-        placeholder="Summary"
+        value={summary}
       />
-      <input
-        value={trailer}
+
+      <TextField
+        variant="outlined"
+        label="Trailer"
         onChange={(event) => setTrailer(event.target.value)}
-        type="text"
-        placeholder="Trailer"
+        value={trailer}
       />
 
       {/* Task 3.2 - Add the color to the list */}
       {/* Existing Colors + New Color */}
       {/* submit -> onSubmit event triggered */}
       {/* <button type="submit">➕ Add</button> */}
-      <Button type="submit" variant="contained">
+      <Button type="submit" variant="contained" startIcon={<AddIcon />}>
         Add Movie
       </Button>
       {/* <Button color="error" type="submit" variant="contained">
