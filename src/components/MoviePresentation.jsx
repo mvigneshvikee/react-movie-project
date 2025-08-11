@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MovieCounter } from "./MovieCounter";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Rating from "@mui/material/Rating";
 

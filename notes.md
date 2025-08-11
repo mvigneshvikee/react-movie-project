@@ -130,3 +130,18 @@
 
 - Material Design --> Developed by Google
 - React Material --> MUI
+
+### Modern CSS
+
+- Logical Properties
+- padding-inline: 1rem;
+- margin-inline : 1rem;
+
+- MVP --> Minimum Valuable Product
+
+- Query Params --> ? key1= value1 & key2 = value2
+
+- BEM --> Block Element Modifier
+- React Fragmentation --> <> ... </>
+- React using Conditional Rendataring
+- Intl.NumberFormat --> 12,897
