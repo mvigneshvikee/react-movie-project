@@ -8,6 +8,7 @@ import { AddMovie } from "./pages/AddMovie";
 import { MovieUpdate } from "./pages/MovieUpdate";
 import "./styles.css";
 import { Navbar } from "./Navbar";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // Component = Logic + UI
 export default function App() {

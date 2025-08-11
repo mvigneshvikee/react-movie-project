@@ -45,7 +45,10 @@ export function MovieList() {
             movie={movie}
             deleteBtn={
               <button onClick={() => deleteMovie(movie.id)}>
-                🗑️ Delete Me
+                <i
+                  className="fa-solid fa-trash"
+                  style={{ color: "#f21c32" }}
+                ></i>
               </button>
             }
           />
