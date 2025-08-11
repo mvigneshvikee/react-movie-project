@@ -122,6 +122,7 @@ border: none;
         display: flex;
         justify-content: space-between;
         padding: 5px;
+        
     }
     .show-summary{
       font-size: 18px;
@@ -147,6 +148,7 @@ border: none;
 .bottom-buttons{
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
   .edit-delete-container{
     display: flex;
     gap: 20px;

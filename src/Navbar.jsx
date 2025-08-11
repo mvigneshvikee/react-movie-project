@@ -1,6 +1,6 @@
-import "./Navbar.css";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css";
 
 export function Navbar() {
   const navRef = useRef();
@@ -11,7 +11,7 @@ export function Navbar() {
 
   return (
     <header>
-      <h3>V Movies</h3>
+      <h3>V Cinemas</h3>
       <nav ref={navRef}>
         <a href="/">Home</a>
         <a href="/movieList">Movie List</a>
