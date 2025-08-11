@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MovieCounter } from "./MovieCounter";
 import { Link, useNavigate } from "react-router";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Rating from "@mui/material/Rating";
 
 function MoviePresentation({
   movie: { id, name, poster, rating, summary },
@@ -44,15 +45,15 @@ function MoviePresentation({
           ></i>
         </button>
         {/* Conditional Styling  */}
-        <h2
-          style={{
-            color: rating > 8.5 ? "green" : "red",
-            fontSize: rating > 8.5 ? "25px" : "20px",
-          }}
-        >
-          ⭐{rating}
-        </h2>
       </div>
+      <h2>
+        <Rating
+          name="movie-rating"
+          defaultValue={rating / 2}
+          precision={0.1}
+          readOnly
+        />
+      </h2>
 
       <br />
       {/* Conditional Styling  */}
